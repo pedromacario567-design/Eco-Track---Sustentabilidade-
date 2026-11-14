@@ -1,0 +1,20 @@
+ecotrack/
+│
+├── index.html
+├── README.md
+├── LICENSE
+├── .gitignore
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── assets/
+│   └── images/
+│       └── eco-logo.svg
+│
+└── .github/
+    └── ISSUE_TEMPLATE/
+        └── bug_report.md
