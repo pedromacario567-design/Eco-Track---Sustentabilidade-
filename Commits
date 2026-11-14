@@ -1,0 +1,8 @@
+git add README.md
+git commit -m "docs: adiciona README com documentação do projeto"
+2. Estrutura HTML
+git add index.html
+git commit -m "feat: cria estrutura inicial da aplicação EcoTrack"
+3. Estilização
+git add css/
+git commit -m "style: adiciona identidade visual responsiva"
