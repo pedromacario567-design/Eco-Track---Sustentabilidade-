@@ -1,0 +1,36 @@
+
+---
+name: Relatar um problema
+about: Informe um erro encontrado no EcoTrack
+title: "[BUG] "
+labels: bug
+assignees: ''
+---
+
+## Descrição do problema
+
+Explique o problema encontrado.
+
+## Como reproduzir?
+
+1. Acesse a página inicial.
+2. Registre uma atividade.
+3. Observe o comportamento.
+
+## Comportamento esperado
+
+Descreva como deveria funcionar.
+
+## Comportamento atual
+
+Descreva o que aconteceu.
+
+## Evidências
+
+Adicione uma captura de tela, se possível.
+
+## Ambiente
+
+- Navegador:
+- Sistema operacional:
+- Data:
