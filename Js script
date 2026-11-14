@@ -1,0 +1,92 @@
+
+const form = document.getElementById("activityForm");
+const activityList = document.getElementById("activityList");
+
+const activities = {
+  recycling: {
+    name: "Reciclagem de materiais",
+    icon: "♻️",
+    points: 20,
+    amount: 2
+  },
+  water: {
+    name: "Economia de água",
+    icon: "💧",
+    points: 15,
+    amount: 10
+  },
+  tree: {
+    name: "Plantio de árvore",
+    icon: "🌳",
+    points: 30,
+    amount: 1
+  }
+};
+
+let records = JSON.parse(
+  localStorage.getItem("ecoRecords") || "[]"
+);
+
+function saveRecords() {
+  localStorage.setItem("ecoRecords", JSON.stringify(records));
+}
+
+function updateDashboard() {
+  const recycling = records
+    .filter(item => item.type === "recycling")
+    .reduce((total, item) => total + item.amount, 0);
+
+  const water = records
+    .filter(item => item.type === "water")
+    .reduce((total, item) => total + item.amount, 0);
+
+  const points = records
+    .reduce((total, item) => total + item.points, 0);
+
+  document.getElementById("recycling").textContent =
+    recycling + " kg";
+
+  document.getElementById("water").textContent =
+    water + " L";
+
+  document.getElementById("points").textContent = points;
+
+  activityList.innerHTML = "";
+
+  if (records.length === 0) {
+    activityList.innerHTML =
+      '<p class="empty">Nenhuma atividade registrada ainda.</p>';
+    return;
+  }
+
+  records.slice().reverse().forEach(item => {
+    const element = document.createElement("div");
+    element.className = "activity-item";
+
+    const description = document.createElement("p");
+    description.textContent =
+      `${item.icon} ${item.name} — +${item.points} pontos`;
+
+    element.appendChild(description);
+    activityList.appendChild(element);
+  });
+}
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const type = document.getElementById("activity").value;
+  const selected = activities[type];
+
+  records.push({
+    type,
+    ...selected,
+    date: new Date().toLocaleDateString("pt-BR")
+  });
+
+  saveRecords();
+  updateDashboard();
+  form.reset();
+});
+
+updateDashboard();
