@@ -118,6 +118,27 @@ SEU NOME
 
 Desenvolvedor em formação | Estudante de tecnologia.
 
+ecotrack/
+│
+├── index.html
+├── README.md
+├── LICENSE
+├── .gitignore
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── assets/
+│   └── images/
+│       └── eco-logo.svg
+│
+└── .github/
+    └── ISSUE_TEMPLATE/
+        └── bug_report.md
+
 Projeto fictício desenvolvido para fins educacionais e demonstração de conhecimentos em desenvolvimento web.
 
 📄 Licença
