@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoTrack: acompanhe seus hábitos sustentáveis.">
+  <title>EcoTrack | Sustentabilidade</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="assets/images/eco-logo.svg" alt="EcoTrack">
+      EcoTrack
+    </a>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#atividades">Atividades</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <main class="container" id="inicio">
+    <section class="welcome">
+      <div>
+        <span class="tag">PEQUENAS AÇÕES, GRANDES MUDANÇAS</span>
+        <h1>Cuide do planeta.<br><span>Transforme o futuro.</span></h1>
+        <p>Acompanhe seus hábitos sustentáveis e descubra o impacto positivo das suas atitudes.</p>
+        <a href="#atividades" class="button">Começar agora</a>
+      </div>
+      <div class="hero-icon">🌱</div>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card">
+        <span>♻️</span>
+        <h2 id="recycling">0 kg</h2>
+        <p>Materiais reciclados</p>
+      </article>
+
+      <article class="stat-card">
+        <span>💧</span>
+        <h2 id="water">0 L</h2>
+        <p>Água economizada</p>
+      </article>
+
+      <article class="stat-card">
+        <span>⭐</span>
+        <h2 id="points">0</h2>
+        <p>Pontos ecológicos</p>
+      </article>
+    </section>
+
+    <section class="activities" id="atividades">
+      <div class="section-heading">
+        <div>
+          <span class="tag">SEU PROGRESSO</span>
+          <h2>Hábitos sustentáveis</h2>
+        </div>
+      </div>
+
+      <div class="activity-list" id="activityList">
+        <p class="empty">Nenhuma atividade registrada ainda.</p>
+      </div>
+
+      <form id="activityForm" class="activity-form">
+        <h3>Registrar nova atividade</h3>
+
+        <label for="activity">Escolha uma atividade</label>
+        <select id="activity" required>
+          <option value="recycling">Reciclei materiais</option>
+          <option value="water">Economizei água</option>
+          <option value="tree">Plantei uma árvore</option>
+        </select>
+
+        <button type="submit" class="button">Registrar atividade +</button>
+      </form>
+    </section>
+
+    <section class="about" id="sobre">
+      <h2>Um planeta melhor começa com você.</h2>
+      <p>O EcoTrack é um projeto fictício desenvolvido para incentivar
+      práticas sustentáveis através da tecnologia.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 EcoTrack — Projeto acadêmico fictício.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
